@@ -1,0 +1,146 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Info Flex - Cricket, Study, News, Tech & AI Tools"> 
+  <title>Info Flex</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }body {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #0f172a;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.search-bar {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+}
+
+.menu-toggle {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.sidebar {
+  background-color: #1e293b;
+  color: white;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: -260px;
+  height: 100%;
+  overflow: auto;
+  transition: 0.3s;
+  padding-top: 60px;
+  z-index: 1000;
+}
+
+.sidebar nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  padding: 1rem;
+}
+
+.sidebar nav ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  transition: 0.2s;
+}
+
+.sidebar nav ul li a:hover {
+  background-color: #334155;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+main {
+  margin: 2rem;
+  padding-left: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #0f172a;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .search-bar {
+    width: 100px;
+  }
+}
+
+  </style>
+</head><body>
+  <header>
+    <div class="logo">Info Flex</div>
+    <input type="text" placeholder="Search..." class="search-bar" />
+    <div class="menu-toggle" onclick="toggleSidebar()">&#9776;</div>
+  </header>  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>  <aside class="sidebar" id="sidebar">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="live-cricket.html">Live Cricket Score</a></li>
+        <li><a href="study.html">Study Material</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="technology.html">Technology</a></li>
+        <li><a href="ai-tools.html">AI Tools</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </aside>  <main>
+    <section class="home">
+      <!-- Content area -->
+    </section>
+  </main>  <footer>
+    <p>&copy; 2025 Info Flex. All rights reserved.</p>
+  </footer>  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      const overlay = document.getElementById("overlay");
+      if (sidebar.style.left === "0px") {
+        sidebar.style.left = "-260px";
+        overlay.style.display = "none";
+      } else {
+        sidebar.style.left = "0px";
+        overlay.style.display = "block";
+      }
+    }
+  </script></body></html>
